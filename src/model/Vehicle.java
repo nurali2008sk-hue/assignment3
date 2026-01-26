@@ -30,4 +30,11 @@ public abstract class Vehicle {
             throw new IllegalArgumentException("Price must be > 0");
         this.pricePerDay = price;
     }
+
+    public String getModel(){
+        return model;
+    }
+    public double getPricePerDay(){
+        return pricePerDay;
+    }
 }
