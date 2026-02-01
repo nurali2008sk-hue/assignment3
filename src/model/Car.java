@@ -1,18 +1,20 @@
 package model;
 
-public class Car extends Vehicle {
+public class Car extends VehicleBase {
+    private Engine engine; // composition
 
-    public Car(int id, String model, double pricePerDay) {
-        super(id, model, pricePerDay);
+    public Car(int id, String name, double pricePerDay, Engine engine) {
+        super(id, name, pricePerDay);
+        this.engine = engine;
     }
 
-    @Override
-    public String getType() {
-        return "CAR";
+    @Override public String getType() { return "CAR"; }
+
+    @Override public double calculateRentalCost(int days) {
+        return getPricePerDay() * days;
     }
 
-    @Override
-    public double calculateRentalCost(int days) {
-        return pricePerDay * days;
-    }
+    public Engine getEngine() { return engine; }
 }
+
+

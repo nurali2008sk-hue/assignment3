@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerRepository {
+public class  CustomerRepository {
 
     public void create(Customer customer) {
         String sql = "INSERT INTO customers(name, email) VALUES (?, ?)";

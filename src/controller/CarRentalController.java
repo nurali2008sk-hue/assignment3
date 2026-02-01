@@ -61,7 +61,8 @@ public class CarRentalController {
         System.out.print("Price per day: ");
         double price = scanner.nextDouble();
 
-        vehicleService.addVehicle(new Car(0, model, price));
+
+        vehicleService.addVehicle(new Car(0, model, price,null));
         System.out.println("Car added!");
     }
 
@@ -71,7 +72,7 @@ public class CarRentalController {
         System.out.print("Price per day: ");
         double price = scanner.nextDouble();
 
-        vehicleService.addVehicle(new Truck(0, model, price));
+        vehicleService.addVehicle(new Truck(0, model, price, null));
         System.out.println("Truck added!");
     }
 
